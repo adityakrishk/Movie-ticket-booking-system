@@ -1,8 +1,8 @@
-Movie Ticket Booking System
+#Movie Ticket Booking System
 
 A simple Python-based Movie Ticket Booking System.
 
-Features
+#Features
 
 View available movies
 
@@ -16,13 +16,13 @@ Calculate total price
 
 Confirm or cancel booking
 
-Requirements
+#Requirements
 
 Python 3.x
 
 No additional libraries are required.
 
-How to Run
+#How to Run
 
 Make sure Python is installed.
 
@@ -35,11 +35,11 @@ You can also run it from Command Prompt:
 python main.py
 
 
-If that does not work, try:
+#If that does not work, try:
 
 py main.py
 
-Note
+#Note
 
 Bookings are stored temporarily while the program is running. All bookings will be cleared when the program is closed.
 
