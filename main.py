@@ -1,7 +1,3 @@
-# ==========================================
-#       MOVIE TICKET BOOKING SYSTEM
-# ==========================================
-
 movies = [
     ["Avengers: Endgame", "3 hours 1 minute", 250],
     ["Inception", "2 hours 28 minutes", 200],
@@ -23,11 +19,6 @@ seats = [
     "D1", "D2", "D3", "D4", "D5"
 ]
 
-
-# ==========================================
-# BOOKED SEATS
-# ==========================================
-
 booked = []
 
 for movie in range(len(movies)):
@@ -39,22 +30,12 @@ for movie in range(len(movies)):
 
     booked.append(movie_bookings)
 
-
-# ==========================================
-# FOOD AND DRINKS
-# ==========================================
-
 food_menu = [
     ["Popcorn", 80],
     ["Tea", 30],
     ["Coffee", 30],
     ["Cold Drink", 30]
 ]
-
-
-# ==========================================
-# SHOW MOVIES
-# ==========================================
 
 def show_movies():
 
@@ -69,11 +50,6 @@ def show_movies():
         print("   Price    : Rs." + str(movies[i][2]))
 
     print("\n==========================================")
-
-
-# ==========================================
-# SHOW SEATS
-# ==========================================
 
 def show_seats(movie_number, showtime_number):
 
@@ -101,11 +77,6 @@ def show_seats(movie_number, showtime_number):
     print("------------------------------------------")
     print("X = ALREADY BOOKED")
     print("==========================================")
-
-
-# ==========================================
-# FOOD AND DRINK SELECTION
-# ==========================================
 
 def select_food():
 
@@ -191,11 +162,6 @@ def select_food():
 
     return selected_food, food_total
 
-
-# ==========================================
-# BOOK TICKETS
-# ==========================================
-
 def book_ticket():
 
     # SELECT MOVIE
@@ -217,9 +183,6 @@ def book_ticket():
         return
 
     movie_number = movie - 1
-
-
-    # SELECT SHOWTIME
 
     print("\n==========================================")
     print("              SELECT SHOWTIME")
@@ -245,9 +208,6 @@ def book_ticket():
 
     showtime_number = time - 1
 
-
-    # SHOW SEATS
-
     show_seats(movie_number, showtime_number)
 
     seat_input = input(
@@ -259,9 +219,6 @@ def book_ticket():
         .replace(" ", "")
         .split(",")
     )
-
-
-    # CHECK SEATS
 
     already_booked = booked[movie_number][showtime_number]
 
@@ -277,31 +234,16 @@ def book_ticket():
             print("Seat already booked:", seat)
             return
 
-
-    # CUSTOMER NAME
-
     name = input("Enter your name: ")
-
-
-    # TICKET PRICE
-
+    
     ticket_count = len(selected_seats)
 
     ticket_total = movies[movie_number][2] * ticket_count
 
-
-    # FOOD AND DRINKS
-
     selected_food, food_total = select_food()
 
-
-    # FINAL TOTAL
-
     total = ticket_total + food_total
-
-
-    # BOOKING SUMMARY
-
+    
     print("\n==========================================")
     print("             BOOKING SUMMARY")
     print("==========================================")
@@ -333,9 +275,6 @@ def book_ticket():
     print("------------------------------------------")
     print("TOTAL        : Rs.", total)
     print("==========================================")
-
-
-    # CONFIRM BOOKING
 
     confirm = input("Confirm booking? (y/n): ")
 
@@ -370,11 +309,6 @@ def book_ticket():
     else:
 
         print("\nBooking cancelled.")
-
-
-# ==========================================
-# MAIN MENU
-# ==========================================
 
 while True:
 
