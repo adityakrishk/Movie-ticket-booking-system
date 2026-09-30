@@ -1,4 +1,4 @@
-PROBLEM STATEMENT
+PROBLEM STATEMEN
 
 The Movie Ticket Booking System is a console-based application designed to simplify the process of booking movie tickets. In a traditional booking process, customers may need to manually check movie details, showtimes, seat availability, and calculate ticket and food costs. This project provides a simple computerized system where users can select a movie, choose a showtime, select available seats, add food and drinks, and calculate the total booking cost. The system also prevents already booked seats from being selected again for the same movie and showtime.
 
